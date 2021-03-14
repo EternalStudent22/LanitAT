@@ -51,5 +51,7 @@ public class Zoo {
         //просим подать голос
         worker.getVoice(duck);
         worker.getVoice(tiger);
+        //сажаем животных в вольер
+
     }
 }
