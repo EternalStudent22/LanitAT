@@ -43,11 +43,9 @@ public class Zoo {
                 worker.feed(animals[i],foods[j]);
             }
         }
-        //worker.feed(tiger,worms);
+
         tiger.run();
-//        worker.feed(duck,worms);
-//        worker.feed(fish,worms);
-//        worker.feed(duck,corn);
+
         //просим подать голос
         worker.getVoice(duck);
         worker.getVoice(tiger);
