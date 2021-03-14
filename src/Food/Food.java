@@ -3,6 +3,7 @@ package Food;
 public abstract class Food {
     protected int satisfying;
     protected int energyRecovery;
+    protected String nameEat;
 
     public int getSatisfying() {
         return satisfying;
@@ -20,9 +21,14 @@ public abstract class Food {
         this.energyRecovery = energyRecovery;
     }
 
+    public String getNameEat() {
+        return nameEat;
+    }
+
     public Food(int satisfying, int energyRecovery){
         this.satisfying=satisfying;
         this.energyRecovery=energyRecovery;
+        this.nameEat="";
     }
 
 

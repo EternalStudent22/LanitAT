@@ -18,9 +18,24 @@ public class Elephant extends Herbivore implements Voice,Run{
         }
     }
 
+    public void walk(){
+        if(unitsHunger>0 && unitsPower>0){
+            unitsPower-=1;
+            unitsHunger-=1;
+            System.out.println(name+":Ходит");}
+        else if(unitsPower<=0){
+            System.out.println(name+":устал,нужно поесть");
+        }else if(unitsHunger<=0){
+            System.out.println(name+":голодный,нужно поесть");
+        }
+    }
+
     public String voice(){
-        unitsHunger-=5;
-        unitsPower-=4;
         return name+":дудит в хобот";
+    }
+
+    @Override
+    public String agressionVoice() {
+        return name+":дудит агрессивно";
     }
 }

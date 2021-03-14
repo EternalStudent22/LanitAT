@@ -8,9 +8,22 @@ public class Duck extends Herbivore implements Voice,Swim,Fly {
 
     public void fly(){
         if(unitsHunger>0 && unitsPower>0){
-        unitsHunger-=3;
-        unitsPower-=3;
+        unitsHunger-=2;
+        unitsPower-=2;
         System.out.println(name+":Летает");}
+        else if(unitsPower<=0){
+            System.out.println(name+":устал,нужно поесть");
+        }else if(unitsHunger<=0){
+            System.out.println(name+":голодный,нужно поесть");
+        }
+    }
+
+    @Override
+    public void fastFly() {
+        if(unitsHunger>0 && unitsPower>0){
+            unitsHunger-=4;
+            unitsPower-=4;
+            System.out.println(name+":Летает на пределе");}
         else if(unitsPower<=0){
             System.out.println(name+":устал,нужно поесть");
         }else if(unitsHunger<=0){
@@ -20,6 +33,11 @@ public class Duck extends Herbivore implements Voice,Swim,Fly {
 
     public String voice(){
         return name+":делает кря-кря";
+    }
+
+    @Override
+    public String agressionVoice() {
+        return name+":делает агрессивное кря";
     }
 
     public void swim(){
@@ -32,5 +50,18 @@ public class Duck extends Herbivore implements Voice,Swim,Fly {
     }else if(unitsHunger<=0){
         System.out.println(name+":голодный,нужно поесть");
     }
+    }
+
+    @Override
+    public void downSwim() {
+        if(unitsHunger>0 && unitsPower>0){
+            unitsHunger-=2;
+            unitsPower-=1;
+            System.out.println(name+":Ныряет");}
+        else if(unitsPower<=0){
+            System.out.println(name+":устал,нужно поесть");
+        }else if(unitsHunger<=0){
+            System.out.println(name+":голодный,нужно поесть");
+        }
     }
 }
