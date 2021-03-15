@@ -2,8 +2,9 @@ package Animals;
 
 public class Elephant extends Herbivore implements Voice,Run{
 
-    public Elephant(String name, int weight, int unitsHunger, int unitsPower) {
-        super(name, weight, unitsHunger, unitsPower);
+
+    public Elephant(String name, int weight, int unitsHunger, int unitsPower,int size) {
+        super(name, weight, unitsHunger, unitsPower,size);
     }
 
     public void run(){

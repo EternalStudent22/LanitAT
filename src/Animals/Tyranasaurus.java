@@ -2,8 +2,8 @@ package Animals;
 
 public class Tyranasaurus extends Carnivorous implements Voice,Run{
 
-    public Tyranasaurus(String name, int weight, int unitsHunger, int unitsPower) {
-        super(name, weight, unitsHunger, unitsPower);
+    public Tyranasaurus(String name, int weight, int unitsHunger, int unitsPower,int size) {
+        super(name, weight, unitsHunger, unitsPower,size);
     }
 
     public String voice(){

@@ -2,8 +2,10 @@ package Animals;
 
 public class Duck extends Herbivore implements Voice,Swim,Fly {
 
-    public Duck(String name, int weight, int unitsHunger, int unitsPower) {
-        super(name, weight, unitsHunger, unitsPower);
+
+
+    public Duck(String name, int weight, int unitsHunger, int unitsPower, int size) {
+        super(name, weight, unitsHunger, unitsPower,size);
     }
 
     public void fly(){

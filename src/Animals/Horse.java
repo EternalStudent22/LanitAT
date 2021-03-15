@@ -3,8 +3,8 @@ package Animals;
 public class Horse extends  Herbivore implements Voice,Run{
 
 
-    public Horse(String name, int weight, int unitsHunger, int unitsPower) {
-        super(name, weight, unitsHunger, unitsPower);
+    public Horse(String name, int weight, int unitsHunger, int unitsPower,int size) {
+        super(name, weight, unitsHunger, unitsPower,size);
     }
 
     public String voice(){

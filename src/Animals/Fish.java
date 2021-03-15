@@ -2,8 +2,8 @@ package Animals;
 
 public class Fish extends Carnivorous implements Swim {
 
-    public Fish(String name, int weight, int unitsHunger, int unitsPower) {
-        super(name, weight, unitsHunger, unitsPower);
+    public Fish(String name, int weight, int unitsHunger, int unitsPower,int size) {
+        super(name, weight, unitsHunger, unitsPower,size);
     }
 
     public void swim(){

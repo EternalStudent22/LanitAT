@@ -1,17 +1,19 @@
 package Animals;
+import CastomExeption.WrongFoodException;
 import Food.Food;
 import Food.Grass;
+
 
 public abstract class Carnivorous extends Animal {
 
 
-    public Carnivorous(String name, int weight, int unitsHunger, int unitsPower) {
-        super(name, weight, unitsHunger, unitsPower);
+    public Carnivorous(String name, int weight, int unitsHunger, int unitsPower,int size) {
+        super(name, weight, unitsHunger, unitsPower,size);
     }
 
-    public void eat(Food food) {
+    public void eat(Food food) throws WrongFoodException {
         if(food instanceof Grass){
-            System.out.println(name+" не есть:"+food.getNameEat()+ " он хищник");
+            throw new WrongFoodException(name+" не есть:"+food.getNameEat()+ " он хищник");
         }else{
             unitsHunger+=food.getSatisfying();
             unitsPower+=food.getEnergyRecovery();
